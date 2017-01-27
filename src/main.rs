@@ -33,6 +33,21 @@ fn main() {
         println!("{} {} {} {}", ind_i, data_x[[ind_i, 0]], data_x[[ind_i, 1]], class_t[ind_i])
     }
 
-    // run gradeint descent 
+    // run gradeint descent
+    let mut weights_w = Vector::<f64>::zeros(num_dim+1);
+    let mut output_y = Vector::<f64>::zeros(num_data_points);
+    let max_iter: usize = 10;
+    for iter_i 0..max_iter: {
+        // compute all the activations
+        for ind_i 0..num_data_points: {
+            let a = weights_w*data_x;
+            output_y[ind_i] = sigmoid(a);
+        }
 
+        // compute outputs
+
+        // compute erros
+        // compute the gradeint vector
+        // make step, using learning rate eta and weight decay alpha
+    }
 }
